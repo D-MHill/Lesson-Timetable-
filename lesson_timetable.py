@@ -51,8 +51,14 @@ lessons = [
     {"day": "Friday", "time": "14:15", "subject": "Spanish"}
 ]
 
+def show_timetable(day):
+    print(f"On {day.capitalize()} you have:")
+
+    for lesson in lessons:
+        if day.lower() == lesson["day"].lower():
+            print(lesson["time"], "-", lesson["subject"])
+
+
 day = input("What day would you like to see? ")
 
-for lesson in lessons:
-    if day.lower() == lesson["day"].lower():
-        print(lesson["time"], "-", lesson["subject"])
+show_timetable(day)
