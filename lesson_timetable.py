@@ -51,6 +51,16 @@ lessons = [
     {"day": "Friday", "time": "14:15", "subject": "Spanish"}
 ]
 
+valid_days = [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+]
+
 
 def show_timetable(day):
     print(f"On {day.capitalize()} you have:")
@@ -61,7 +71,10 @@ def show_timetable(day):
 
 
 while True:
-    day = input("What day would you like to see? ")
+    day = input("What day would you like to see? ").strip().lower()
+
+    if day not in valid_days:
+     print("Invalid day! Please enter a valid day of the week.")
 
     show_timetable(day)
 
