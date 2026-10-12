@@ -76,6 +76,9 @@ while True:
     if day not in valid_days:
      print("Invalid day! Please enter a valid day of the week.")
 
+    elif day == "saturday" or day == "sunday":
+     print("You don't have lessons on this day!")
+
     show_timetable(day)
 
     again = input("Would you like to see another day? (yes/no) ")
